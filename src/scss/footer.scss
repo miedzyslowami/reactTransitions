@@ -1,0 +1,80 @@
+.footer__wrapper {
+  margin-top: 30px;
+  padding: 0 10px;
+
+  .footer__logo__line {
+    line-height: 2rem;
+
+    .logo {
+      font-family: 'Playfair Display SC', serif;
+      font-size: 2rem;
+      float: left;
+    }
+
+    .newsletter {
+      float: right;
+      padding-left: 20px;
+      border-left: 1px solid #eeeeee;
+      text-transform: uppercase;
+    }
+
+    & svg {
+      float: right;
+      margin-left: 20px;
+      color: #8e8b8b;
+    }
+
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+
+  .hr {
+    margin: 25px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .footer__copyrights__line {
+    line-height: 2;
+    color: #8e8b8b;
+
+    .copyrights {
+      line-height: 2;
+      float: left;
+    }
+  }
+
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+@media all and (max-width:768px) {
+  .footer__wrapper {
+    .footer__logo__line {
+      & svg,
+      .logo,
+      .newsletter {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        padding: 0;
+        border: none;
+        text-align: center;
+      }
+    }
+
+    .footer__copyrights__line {
+      .copyrights {
+        float: none;
+        margin: 10px auto;
+        text-align: center;
+      }
+    }
+  }
+}

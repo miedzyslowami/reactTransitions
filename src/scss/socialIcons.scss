@@ -1,0 +1,37 @@
+.horizontal{
+  display: grid;
+  grid-template-areas:"facebook instagram youtube twitter";
+
+    float:right;
+    justify-content:space-evenly;
+    & svg:nth-of-type(1){
+      grid-area:facebook;
+    }
+    & svg:nth-of-type(2){
+      grid-area:instagram;
+    }
+    & svg:nth-of-type(3){
+      grid-area:youtube;
+    }
+    & svg:nth-of-type(4){
+      grid-area:twitter;
+    }
+  & svg{
+    margin-left:45px;
+    color:#8e8b8b;
+    transition: .3s color linear;
+    &:hover{
+      color:#a6bcce;
+    }
+  }
+
+}
+@media all and (max-width:768px) {
+  .horizontal{
+    float:none;
+      margin:20px auto;
+    & svg{
+      margin-left:0;
+    }
+  }
+}
