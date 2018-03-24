@@ -6,17 +6,19 @@ import {HashRouter,Route,Switch, Link} from 'react-router-dom';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import Footer from './Footer.jsx';
+import LatestNews from './LatestNews.jsx';
 import scss from '../scss/index.scss';
 
 
 class App extends React.Component {
     render() {
-        return(<div className="template">
+        return(<div className={scss.template}>
 
             <Switch>
                 <Route exact path="/" component={Home} />
                <Route path="/about" component={About} />
            </Switch>
+           <LatestNews/>
            <Footer logo="MI Talent"/>
            </div>
       )

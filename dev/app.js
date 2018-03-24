@@ -2814,6 +2814,10 @@ var _Footer = __webpack_require__(80);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _LatestNews = __webpack_require__(99);
+
+var _LatestNews2 = _interopRequireDefault(_LatestNews);
+
 var _index = __webpack_require__(95);
 
 var _index2 = _interopRequireDefault(_index);
@@ -2843,13 +2847,14 @@ var App = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'template' },
+                { className: _index2.default.template },
                 _react2.default.createElement(
                     _reactRouterDom.Switch,
                     null,
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
                 ),
+                _react2.default.createElement(_LatestNews2.default, null),
                 _react2.default.createElement(_Footer2.default, { logo: 'MI Talent' })
             );
         }
@@ -26903,6 +26908,135 @@ exports.push([module.i, "body * {\n  font-size: 16px;\n  margin: 0;\n  padding: 
 /***/ (function(module, exports) {
 
 module.exports = { prefix: 'far', iconName: 'envelope', icon: [512, 512, [], "f0e0", "M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"] };
+
+/***/ }),
+/* 98 */,
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _latestnews = __webpack_require__(100);
+
+var _latestnews2 = _interopRequireDefault(_latestnews);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var LatestNews = function (_React$Component) {
+    _inherits(LatestNews, _React$Component);
+
+    function LatestNews() {
+        _classCallCheck(this, LatestNews);
+
+        return _possibleConstructorReturn(this, (LatestNews.__proto__ || Object.getPrototypeOf(LatestNews)).apply(this, arguments));
+    }
+
+    _createClass(LatestNews, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: _latestnews2.default.wrapper },
+                _react2.default.createElement(
+                    'h2',
+                    { className: _latestnews2.default.heading },
+                    'Latest news'
+                ),
+                _react2.default.createElement('hr', { className: _latestnews2.default.hr })
+            );
+        }
+    }]);
+
+    return LatestNews;
+}(_react2.default.Component);
+
+exports.default = LatestNews;
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(101);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(35)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?modules&localIdentName=[local]---[hash:base64:5]!./latestnews.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?modules&localIdentName=[local]---[hash:base64:5]!./latestnews.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(34)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".wrapper---1wId2 .heading---2ffh_ {\n  font-weight: 400;\n  font-size: 2rem;\n  text-align: center;\n  margin-bottom: 20px; }\n\n.wrapper---1wId2 .hr---20slD {\n  display: block;\n  width: 40px;\n  margin: auto;\n  border-bottom: none;\n  border-left: none;\n  border-left: none; }\n\n.wrapper---1wId2 .newsGrid---2EHVR {\n  display: -ms-grid;\n  display: grid; }\n", ""]);
+
+// exports
+exports.locals = {
+	"wrapper": "wrapper---1wId2",
+	"heading": "heading---2ffh_",
+	"hr": "hr---20slD",
+	"newsGrid": "newsGrid---2EHVR"
+};
 
 /***/ })
 /******/ ]);
