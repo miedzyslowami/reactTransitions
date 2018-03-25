@@ -26831,7 +26831,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, ".wrapper---2zR3p {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 320px;\n  margin: 0 auto;\n  margin-top: 30px;\n  padding: 0 10px; }\n  .wrapper---2zR3p .footer__logo__line---h0seL {\n    line-height: 2rem; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .logo---2nmg8 {\n      font-family: 'Playfair Display SC', serif;\n      font-size: 2rem;\n      float: left; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .newsletter---1sE1p {\n      float: right;\n      padding-left: 20px;\n      border-left: 1px solid #eeeeee;\n      text-transform: uppercase; }\n    .wrapper---2zR3p .footer__logo__line---h0seL svg {\n      float: right;\n      margin-left: 20px;\n      color: #8e8b8b; }\n    .wrapper---2zR3p .footer__logo__line---h0seL:after {\n      clear: both;\n      content: \"\";\n      display: block; }\n  .wrapper---2zR3p .hr---gBn9x {\n    margin: 25px 0;\n    border-top: none;\n    border-left: none;\n    border-right: none; }\n  .wrapper---2zR3p .footer__copyrights__line---2y5Zr {\n    line-height: 2;\n    color: #8e8b8b; }\n    .wrapper---2zR3p .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n      line-height: 2;\n      float: left; }\n  .wrapper---2zR3p:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n\n@media all and (max-width: 768px) {\n  .footer__wrapper---3AAVB .footer__logo__line---h0seL svg,\n  .footer__wrapper---3AAVB .footer__logo__line---h0seL .logo---2nmg8,\n  .footer__wrapper---3AAVB .footer__logo__line---h0seL .newsletter---1sE1p {\n    float: none;\n    display: block;\n    margin: 10px auto;\n    padding: 0;\n    border: none;\n    text-align: center; }\n  .footer__wrapper---3AAVB .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n    float: none;\n    margin: 10px auto;\n    text-align: center; } }\n", ""]);
+exports.push([module.i, ".wrapper---2zR3p {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 320px;\n  margin: 0 auto;\n  margin-top: 30px;\n  padding: 0 10px; }\n  .wrapper---2zR3p .footer__logo__line---h0seL {\n    line-height: 2rem; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .logo---2nmg8 {\n      font-family: 'Playfair Display SC', serif;\n      font-size: 2rem;\n      float: left; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .newsletter---1sE1p {\n      float: right;\n      padding-left: 20px;\n      border-left: 1px solid #eeeeee;\n      text-transform: uppercase; }\n    .wrapper---2zR3p .footer__logo__line---h0seL svg {\n      float: right;\n      margin-left: 20px;\n      color: #8e8b8b; }\n    .wrapper---2zR3p .footer__logo__line---h0seL:after {\n      clear: both;\n      content: \"\";\n      display: block; }\n  .wrapper---2zR3p .hr---gBn9x {\n    margin: 25px 0;\n    border-top: none;\n    border-left: none;\n    border-right: none; }\n  .wrapper---2zR3p .footer__copyrights__line---2y5Zr {\n    line-height: 2;\n    color: #8e8b8b; }\n    .wrapper---2zR3p .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n      line-height: 2;\n      float: left; }\n  .wrapper---2zR3p:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n\n@media all and (max-width: 768px) {\n  .wrapper---2zR3p .footer__logo__line---h0seL svg,\n  .wrapper---2zR3p .footer__logo__line---h0seL .logo---2nmg8,\n  .wrapper---2zR3p .footer__logo__line---h0seL .newsletter---1sE1p {\n    float: none;\n    display: block;\n    margin: 10px auto;\n    padding: 0;\n    border: none;\n    text-align: center; }\n  .wrapper---2zR3p .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n    float: none;\n    margin: 10px auto;\n    text-align: center; } }\n", ""]);
 
 // exports
 exports.locals = {
@@ -26841,8 +26841,7 @@ exports.locals = {
 	"newsletter": "newsletter---1sE1p",
 	"hr": "hr---gBn9x",
 	"footer__copyrights__line": "footer__copyrights__line---2y5Zr",
-	"copyrights": "copyrights---1XIAG",
-	"footer__wrapper": "footer__wrapper---3AAVB"
+	"copyrights": "copyrights---1XIAG"
 };
 
 /***/ }),
@@ -26980,7 +26979,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, ".wrapper---1wId2 {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 320px;\n  margin: 0 auto; }\n  .wrapper---1wId2 .heading---2ffh_ {\n    font-weight: 400;\n    font-size: 2rem;\n    text-align: center;\n    margin-bottom: 20px; }\n  .wrapper---1wId2 .hr---20slD {\n    display: block;\n    width: 40px;\n    margin: auto;\n    border-bottom: none;\n    border-left: none;\n    border-left: none; }\n  .wrapper---1wId2 .newsGrid---2EHVR {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap; }\n", ""]);
+exports.push([module.i, ".wrapper---1wId2 {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 320px;\n  margin: 0 auto; }\n  .wrapper---1wId2 .heading---2ffh_ {\n    font-weight: 400;\n    font-size: 2rem;\n    text-align: center;\n    margin-bottom: 20px; }\n  .wrapper---1wId2 .hr---20slD {\n    display: block;\n    width: 40px;\n    margin: auto;\n    border-bottom: none;\n    border-left: none;\n    border-left: none; }\n  .wrapper---1wId2 .newsGrid---2EHVR {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    -ms-flex-direction: column;\n        flex-direction: column; }\n\n@media all and (min-width: 768px) {\n  .wrapper---1wId2 .newsGrid---2EHVR {\n    -ms-flex-direction: row;\n        flex-direction: row; } }\n", ""]);
 
 // exports
 exports.locals = {
@@ -26994,7 +26993,7 @@ exports.locals = {
 /* 98 */
 /***/ (function(module, exports) {
 
-module.exports = {"1":{"heading":"Lorem ipsum cupcake Lorem","image":"","altImage":"lorem"},"2":{"heading":"Cupcake orem ipsum cupcake Lorem","image":"","altImage":"cupcake"},"3":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"","altImage":"long"},"4":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"","altImage":"long"},"5":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"","altImage":"long"},"6":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"","altImage":"long"},"7":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"","altImage":"long"}}
+module.exports = {"1":{"heading":"Lorem ipsum cupcake Lorem","image":"./img/london-3253404_640.jpg","altImage":"lorem"},"2":{"heading":"Cupcake orem ipsum cupcake Lorem","image":"./img/model-2303361_640.jpg","altImage":"cupcake"},"3":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"./img/telephone-1055044_640.jpg","altImage":"long"},"4":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"./img/mallard-3138261_640.jpg","altImage":"long"},"5":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"./img/hong-kong-1990268_640.jpg","altImage":"long"},"6":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"./img/architecture-3251899_640.jpg","altImage":"long"},"7":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"./img/architecture-3251899_640.jpg","altImage":"long"}}
 
 /***/ }),
 /* 99 */
@@ -27047,8 +27046,8 @@ var LatestNewsItem = function (_React$Component) {
                     '           '
                 ),
                 _react2.default.createElement(
-                    'h4',
-                    { className: _latestnewsitem2.default.heading },
+                    'a',
+                    { className: _latestnewsitem2.default.heading, href: 'https://pixelbay.com' },
                     this.props.heading
                 )
             );
@@ -27119,7 +27118,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, ".newsItem---R8AK8 {\n  border: 1px solid red;\n  width: 33%;\n  box-sizing: border-box;\n  margin: 10px 0;\n  padding: 10px 20px; }\n  .newsItem---R8AK8 .img---32vAw {\n    margin: 0 auto;\n    display: block; }\n  .newsItem---R8AK8 .heading---26SCx {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap; }\n", ""]);
+exports.push([module.i, ".newsItem---R8AK8 {\n  box-sizing: border-box;\n  margin: 10px 0; }\n  .newsItem---R8AK8 .img---32vAw {\n    margin: 0 auto;\n    display: block;\n    background-color: #a6bcce;\n    width: 200px;\n    height: 200px;\n    -o-object-fit: cover;\n       object-fit: cover; }\n  .newsItem---R8AK8 .heading---26SCx {\n    width: 200px;\n    display: block;\n    margin: 0 auto;\n    padding: 12px 0;\n    text-decoration: none;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold; }\n\n@media all and (min-width: 768px) {\n  .newsItem---R8AK8 {\n    width: 33%;\n    padding: 10px 20px; }\n    .newsItem---R8AK8 .heading---26SCx {\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap; } }\n", ""]);
 
 // exports
 exports.locals = {

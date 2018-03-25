@@ -18,5 +18,14 @@
   .newsGrid{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+@media all and (min-width:768px){
+  .wrapper{
+    .newsGrid{
+      flex-direction: row;
+    }
   }
 }

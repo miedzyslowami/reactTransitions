@@ -7,10 +7,12 @@ class LatestNewsItem extends React.Component {
         super(props)
     }
     render() {
-        return(<div className={scss.newsItem}>
+        return(
+          <div className={scss.newsItem}>
             <figure>
             <img className={scss.img} src={this.props.image} alt={this.props.altImage}/>           </figure>
-            <h4 className={scss.heading}>{this.props.heading}</h4>
+            <a className={scss.heading} href="https://pixelbay.com">
+            {this.props.heading}</a>
             </div>)
     }
 }

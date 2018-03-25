@@ -1,17 +1,38 @@
 $itemWidth:99%/3;
 .newsItem{
-  border:1px solid red;
-  width:$itemWidth;
   box-sizing: border-box;
   margin:10px 0;
-  padding:10px 20px;
+
   .img{
     margin: 0 auto;
     display: block;
+    background-color: #a6bcce;
+    width:200px;
+    height:200px;
+    object-fit: cover;
   }
   .heading{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    width:200px;
+    display: block;
+    margin:0 auto;
+    padding:12px 0;
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+@media all and (min-width:768px){
+  .newsItem{
+    width:$itemWidth;
+    padding:10px 20px;
+    .heading{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
