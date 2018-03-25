@@ -38,7 +38,7 @@ module.exports = {
         loader: 'raw-loader'
       }, {
         test: /\.(gif|png|jpe?g|svg)$/,
-        loader: 'file-loader?name=./src/img/[name].[ext]'
+        loader: 'file-loader?name=./img/[name].[ext]'
       }
 
     ]
