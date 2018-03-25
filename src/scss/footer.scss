@@ -1,4 +1,6 @@
-.footer__wrapper {
+@import 'mixins';
+.wrapper{
+  @include wrapper;
   margin-top: 30px;
   padding: 0 10px;
 

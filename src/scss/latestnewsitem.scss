@@ -1,0 +1,17 @@
+$itemWidth:99%/3;
+.newsItem{
+  border:1px solid red;
+  width:$itemWidth;
+  box-sizing: border-box;
+  margin:10px 0;
+  padding:10px 20px;
+  .img{
+    margin: 0 auto;
+    display: block;
+  }
+  .heading{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

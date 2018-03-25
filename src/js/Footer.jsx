@@ -7,7 +7,7 @@ import scss from '../scss/footer.scss';
 class Footer extends React.Component {
     render() {
         return(<footer>
-                <div className={scss.footer__wrapper}>
+                <div className={scss.wrapper}>
                 <div className={scss.footer__logo__line}>
                     <div className={scss.logo}>{this.props.logo}</div>
                     <FontAwesomeIcon icon={faEnvelope} className="fa-2x"></FontAwesomeIcon>

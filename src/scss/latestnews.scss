@@ -1,4 +1,6 @@
+@import 'mixins';
 .wrapper{
+  @include wrapper;
   .heading{
     font-weight: 400;
     font-size: 2rem;
@@ -14,6 +16,7 @@
     border-left: none;
   }
   .newsGrid{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
