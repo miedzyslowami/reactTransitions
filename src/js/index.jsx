@@ -7,18 +7,22 @@ import Home from './Home.jsx';
 import About from './About.jsx';
 import Footer from './Footer.jsx';
 import LatestNews from './LatestNews.jsx';
+import ClientMain from './ClientMain.jsx';
+import Header from './Header.jsx';
 import scss from '../scss/index.scss';
 
 
 class App extends React.Component {
     render() {
         return(<div className={scss.template}>
-
+            <Header logo="MI Talent"/>
+            <ClientMain/>
+            <LatestNews/>
             <Switch>
                 <Route exact path="/" component={Home} />
                <Route path="/about" component={About} />
            </Switch>
-           <LatestNews/>
+
            <Footer logo="MI Talent"/>
            </div>
       )

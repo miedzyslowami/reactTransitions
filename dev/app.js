@@ -3407,6 +3407,14 @@ var _LatestNews = __webpack_require__(95);
 
 var _LatestNews2 = _interopRequireDefault(_LatestNews);
 
+var _ClientMain = __webpack_require__(104);
+
+var _ClientMain2 = _interopRequireDefault(_ClientMain);
+
+var _Header = __webpack_require__(113);
+
+var _Header2 = _interopRequireDefault(_Header);
+
 var _index = __webpack_require__(102);
 
 var _index2 = _interopRequireDefault(_index);
@@ -3437,13 +3445,15 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: _index2.default.template },
+                _react2.default.createElement(_Header2.default, { logo: 'MI Talent' }),
+                _react2.default.createElement(_ClientMain2.default, null),
+                _react2.default.createElement(_LatestNews2.default, null),
                 _react2.default.createElement(
                     _reactRouterDom.Switch,
                     null,
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
                 ),
-                _react2.default.createElement(_LatestNews2.default, null),
                 _react2.default.createElement(_Footer2.default, { logo: 'MI Talent' })
             );
         }
@@ -26831,7 +26841,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, ".wrapper---2zR3p {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 320px;\n  margin: 0 auto;\n  margin-top: 30px;\n  padding: 0 10px; }\n  .wrapper---2zR3p .footer__logo__line---h0seL {\n    line-height: 2rem; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .logo---2nmg8 {\n      font-family: 'Playfair Display SC', serif;\n      font-size: 2rem;\n      float: left; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .newsletter---1sE1p {\n      float: right;\n      padding-left: 20px;\n      border-left: 1px solid #eeeeee;\n      text-transform: uppercase; }\n    .wrapper---2zR3p .footer__logo__line---h0seL svg {\n      float: right;\n      margin-left: 20px;\n      color: #8e8b8b; }\n    .wrapper---2zR3p .footer__logo__line---h0seL:after {\n      clear: both;\n      content: \"\";\n      display: block; }\n  .wrapper---2zR3p .hr---gBn9x {\n    margin: 25px 0;\n    border-top: none;\n    border-left: none;\n    border-right: none; }\n  .wrapper---2zR3p .footer__copyrights__line---2y5Zr {\n    line-height: 2;\n    color: #8e8b8b; }\n    .wrapper---2zR3p .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n      line-height: 2;\n      float: left; }\n  .wrapper---2zR3p:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n\n@media all and (max-width: 768px) {\n  .wrapper---2zR3p .footer__logo__line---h0seL svg,\n  .wrapper---2zR3p .footer__logo__line---h0seL .logo---2nmg8,\n  .wrapper---2zR3p .footer__logo__line---h0seL .newsletter---1sE1p {\n    float: none;\n    display: block;\n    margin: 10px auto;\n    padding: 0;\n    border: none;\n    text-align: center; }\n  .wrapper---2zR3p .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n    float: none;\n    margin: 10px auto;\n    text-align: center; } }\n", ""]);
+exports.push([module.i, ".wrapper---2zR3p {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 300px;\n  margin: 0 auto;\n  margin-top: 30px;\n  padding: 0 10px; }\n  .wrapper---2zR3p .footer__logo__line---h0seL {\n    line-height: 2rem; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .logo---2nmg8 {\n      font-family: 'Playfair Display SC', serif;\n      font-size: 2rem;\n      float: left; }\n    .wrapper---2zR3p .footer__logo__line---h0seL .newsletter---1sE1p {\n      float: right;\n      padding-left: 20px;\n      border-left: 1px solid #eeeeee;\n      text-transform: uppercase; }\n    .wrapper---2zR3p .footer__logo__line---h0seL svg {\n      float: right;\n      margin-left: 20px;\n      color: #8e8b8b; }\n    .wrapper---2zR3p .footer__logo__line---h0seL:after {\n      clear: both;\n      content: \"\";\n      display: block; }\n  .wrapper---2zR3p .hr---gBn9x {\n    margin: 25px 0;\n    border-top: none;\n    border-left: none;\n    border-right: none; }\n  .wrapper---2zR3p .footer__copyrights__line---2y5Zr {\n    line-height: 2;\n    color: #8e8b8b; }\n    .wrapper---2zR3p .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n      line-height: 2;\n      float: left; }\n  .wrapper---2zR3p:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n\n@media all and (max-width: 768px) {\n  .wrapper---2zR3p .footer__logo__line---h0seL svg,\n  .wrapper---2zR3p .footer__logo__line---h0seL .logo---2nmg8,\n  .wrapper---2zR3p .footer__logo__line---h0seL .newsletter---1sE1p {\n    float: none;\n    display: block;\n    margin: 10px auto;\n    padding: 0;\n    border: none;\n    text-align: center; }\n  .wrapper---2zR3p .footer__copyrights__line---2y5Zr .copyrights---1XIAG {\n    float: none;\n    margin: 10px auto;\n    text-align: center; } }\n", ""]);
 
 // exports
 exports.locals = {
@@ -26885,14 +26895,24 @@ var LatestNews = function (_React$Component) {
     _inherits(LatestNews, _React$Component);
 
     function LatestNews() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, LatestNews);
 
-        return _possibleConstructorReturn(this, (LatestNews.__proto__ || Object.getPrototypeOf(LatestNews)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = LatestNews.__proto__ || Object.getPrototypeOf(LatestNews)).call.apply(_ref, [this].concat(args))), _this), _this.convertDate = function (nr) {}, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(LatestNews, [{
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             return _react2.default.createElement(
                 'section',
                 { id: 'latest_news', className: _latestnews2.default.wrapper },
@@ -26907,7 +26927,7 @@ var LatestNews = function (_React$Component) {
                     { className: _latestnews2.default.newsGrid },
                     Object.values(_dataNews2.default).map(function (element, i) {
                         if (i < 6) {
-                            return _react2.default.createElement(_LatestNewsItem2.default, { key: i, heading: element.heading, image: element.image, altImage: element.altImage });
+                            return _react2.default.createElement(_LatestNewsItem2.default, { key: i, heading: element.heading, image: element.image, altImage: element.altImage, daysAgo: _this2.convertDate(element.daysAgo) });
                         }
                     })
                 )
@@ -26979,7 +26999,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, ".wrapper---1wId2 {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 320px;\n  margin: 0 auto; }\n  .wrapper---1wId2 .heading---2ffh_ {\n    font-weight: 400;\n    font-size: 2rem;\n    text-align: center;\n    margin-bottom: 20px; }\n  .wrapper---1wId2 .hr---20slD {\n    display: block;\n    width: 40px;\n    margin: auto;\n    border-bottom: none;\n    border-left: none;\n    border-left: none; }\n  .wrapper---1wId2 .newsGrid---2EHVR {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    -ms-flex-direction: column;\n        flex-direction: column; }\n\n@media all and (min-width: 768px) {\n  .wrapper---1wId2 .newsGrid---2EHVR {\n    -ms-flex-direction: row;\n        flex-direction: row; } }\n", ""]);
+exports.push([module.i, ".wrapper---1wId2 {\n  width: 95%;\n  max-width: 1200px;\n  min-width: 300px;\n  margin: 0 auto; }\n  .wrapper---1wId2 .heading---2ffh_ {\n    font-weight: 400;\n    font-size: 2rem;\n    text-align: center;\n    margin-bottom: 20px; }\n  .wrapper---1wId2 .hr---20slD {\n    display: block;\n    width: 40px;\n    margin: auto;\n    border-bottom: none;\n    border-left: none;\n    border-left: none; }\n  .wrapper---1wId2 .newsGrid---2EHVR {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    -ms-flex-direction: column;\n        flex-direction: column; }\n\n@media all and (min-width: 768px) {\n  .wrapper---1wId2 .newsGrid---2EHVR {\n    -ms-flex-direction: row;\n        flex-direction: row; } }\n", ""]);
 
 // exports
 exports.locals = {
@@ -26993,7 +27013,7 @@ exports.locals = {
 /* 98 */
 /***/ (function(module, exports) {
 
-module.exports = {"1":{"heading":"Lorem ipsum cupcake Lorem","image":"https://imgur.com/OUFdae7.jpg","altImage":"lorem"},"2":{"heading":"Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/8dHpHkN.jpg","altImage":"cupcake"},"3":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/V0gSdEu.jpg","altImage":"long"},"4":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/BAd30mK.jpg","altImage":"long"},"5":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/GoMSB2k.jpg","altImage":"long"},"6":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/IFbLKql.jpg","altImage":"long"},"7":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/V0gSdEu.jpg","altImage":"long"}}
+module.exports = {"1":{"heading":"Lorem ipsum cupcake Lorem","image":"https://imgur.com/OUFdae7.jpg","altImage":"lorem","daysAgo":"31"},"2":{"heading":"Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/8dHpHkN.jpg","altImage":"cupcake","daysAgo":"2"},"3":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/V0gSdEu.jpg","altImage":"long","daysAgo":"3"},"4":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/BAd30mK.jpg","altImage":"long","daysAgo":"4"},"5":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/GoMSB2k.jpg","altImage":"long","daysAgo":"5"},"6":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/IFbLKql.jpg","altImage":"long","daysAgo":"6"},"7":{"heading":"Cupcake orem ipsum cupcake Lorem Cupcake orem ipsum cupcake Lorem","image":"https://imgur.com/V0gSdEu.jpg","altImage":"long","daysAgo":"7"}}
 
 /***/ }),
 /* 99 */
@@ -27040,15 +27060,23 @@ var LatestNewsItem = function (_React$Component) {
                 'div',
                 { className: _latestnewsitem2.default.newsItem },
                 _react2.default.createElement(
-                    'figure',
-                    null,
-                    _react2.default.createElement('img', { className: _latestnewsitem2.default.img, src: this.props.image, alt: this.props.altImage }),
-                    '           '
+                    'div',
+                    { className: _latestnewsitem2.default.left__box },
+                    _react2.default.createElement('img', { className: _latestnewsitem2.default.img, src: this.props.image, alt: this.props.altImage })
                 ),
                 _react2.default.createElement(
-                    'a',
-                    { className: _latestnewsitem2.default.heading, href: 'https://pixelbay.com' },
-                    this.props.heading
+                    'div',
+                    { className: _latestnewsitem2.default.right__box },
+                    _react2.default.createElement(
+                        'a',
+                        { className: _latestnewsitem2.default.heading, href: 'https://pixelbay.com' },
+                        this.props.heading
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        this.props.daysAgo
+                    )
                 )
             );
         }
@@ -27118,12 +27146,14 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, ".newsItem---R8AK8 {\n  box-sizing: border-box;\n  margin: 10px 0; }\n  .newsItem---R8AK8 .img---32vAw {\n    margin: 0 auto;\n    display: block;\n    background-color: #a6bcce;\n    width: 200px;\n    height: 200px;\n    -o-object-fit: cover;\n       object-fit: cover; }\n  .newsItem---R8AK8 .heading---26SCx {\n    width: 200px;\n    display: block;\n    margin: 0 auto;\n    padding: 12px 0;\n    text-decoration: none;\n    color: black;\n    text-transform: uppercase;\n    font-weight: bold; }\n\n@media all and (min-width: 768px) {\n  .newsItem---R8AK8 {\n    width: 33%;\n    padding: 10px 20px; }\n    .newsItem---R8AK8 .heading---26SCx {\n      overflow: hidden;\n      text-overflow: ellipsis;\n      white-space: nowrap; } }\n", ""]);
+exports.push([module.i, ".newsItem---R8AK8 {\n  box-sizing: border-box;\n  margin: 10px 0; }\n  .newsItem---R8AK8 .left__box---1-fQz {\n    display: block;\n    box-sizing: border-box;\n    width: 100%;\n    margin: 10px auto; }\n    .newsItem---R8AK8 .left__box---1-fQz .img---32vAw {\n      margin: 0 auto;\n      display: block;\n      background-color: #a6bcce;\n      width: 100%; }\n  .newsItem---R8AK8 .right__box---2Z4s6 {\n    display: block;\n    box-sizing: border-box;\n    width: 100%; }\n    .newsItem---R8AK8 .right__box---2Z4s6 .heading---26SCx {\n      font-size: 1.3rem;\n      text-decoration: none;\n      color: #a6bcce;\n      text-transform: uppercase;\n      font-weight: bold;\n      box-sizing: border-box;\n      display: inline-block;\n      word-wrap: break-word;\n      overflow: hidden;\n      max-height: 4.2rem;\n      /* (Number of lines you want visible) * (line-height) */\n      line-height: 1.4rem; }\n\n@media all and (min-width: 768px) {\n  .newsItem---R8AK8 {\n    width: 33%;\n    padding: 10px 20px;\n    height: 200px; }\n    .newsItem---R8AK8 .left__box---1-fQz {\n      display: inline-block;\n      width: 50%;\n      height: 100%;\n      margin: 0 auto; }\n      .newsItem---R8AK8 .left__box---1-fQz .img---32vAw {\n        margin: 0 auto;\n        display: block;\n        background-color: #a6bcce;\n        width: 100%;\n        height: 100%;\n        -o-object-fit: cover;\n           object-fit: cover; }\n    .newsItem---R8AK8 .right__box---2Z4s6 {\n      display: inline-block;\n      box-sizing: border-box;\n      width: 50%;\n      vertical-align: top;\n      padding-left: 20px; } }\n", ""]);
 
 // exports
 exports.locals = {
 	"newsItem": "newsItem---R8AK8",
+	"left__box": "left__box---1-fQz",
 	"img": "img---32vAw",
+	"right__box": "right__box---2Z4s6",
 	"heading": "heading---26SCx"
 };
 
@@ -27186,10 +27216,479 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, "body * {\n  font-size: 16px;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: 'Montserrat', sans-serif; }\n", ""]);
+exports.push([module.i, "body, * {\n  font-size: 16px;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: 'Montserrat', sans-serif; }\n", ""]);
 
 // exports
 
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ClientMainLeft = __webpack_require__(107);
+
+var _ClientMainLeft2 = _interopRequireDefault(_ClientMainLeft);
+
+var _ClientMainRight = __webpack_require__(108);
+
+var _ClientMainRight2 = _interopRequireDefault(_ClientMainRight);
+
+var _clientMainSection = __webpack_require__(105);
+
+var _clientMainSection2 = _interopRequireDefault(_clientMainSection);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ClientMain = function (_React$Component) {
+    _inherits(ClientMain, _React$Component);
+
+    function ClientMain() {
+        _classCallCheck(this, ClientMain);
+
+        return _possibleConstructorReturn(this, (ClientMain.__proto__ || Object.getPrototypeOf(ClientMain)).apply(this, arguments));
+    }
+
+    _createClass(ClientMain, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'section',
+                { className: _clientMainSection2.default.main__section },
+                _react2.default.createElement(
+                    'div',
+                    { className: _clientMainSection2.default.left__wrapper },
+                    _react2.default.createElement(_ClientMainLeft2.default, null)
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _clientMainSection2.default.right__wrapper },
+                    _react2.default.createElement(_ClientMainRight2.default, null)
+                )
+            );
+        }
+    }]);
+
+    return ClientMain;
+}(_react2.default.Component);
+
+exports.default = ClientMain;
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(106);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(11)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?modules&localIdentName=[local]---[hash:base64:5]!./clientMainSection.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?modules&localIdentName=[local]---[hash:base64:5]!./clientMainSection.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(10)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".main__section---1Pc3C {\n  width: 100vw;\n  height: 100vh;\n  box-sizing: border-box; }\n  .main__section---1Pc3C:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n  .main__section---1Pc3C .left__wrapper---1BV9K, .main__section---1Pc3C .right__wrapper---3GEta {\n    box-sizing: border-box;\n    height: 100%;\n    display: -ms-grid;\n    display: grid;\n    grid-column-gap: 0;\n    grid-row-gap: 0; }\n    .main__section---1Pc3C .left__wrapper---1BV9K .right__content---2oQHI, .main__section---1Pc3C .left__wrapper---1BV9K .left__content---1f6rG, .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI, .main__section---1Pc3C .right__wrapper---3GEta .left__content---1f6rG {\n      -ms-flex-item-align: center;\n          -ms-grid-row-align: center;\n          align-self: center;\n      height: 70%; }\n      .main__section---1Pc3C .left__wrapper---1BV9K .right__content---2oQHI > div:first-of-type, .main__section---1Pc3C .left__wrapper---1BV9K .left__content---1f6rG > div:first-of-type, .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI > div:first-of-type, .main__section---1Pc3C .right__wrapper---3GEta .left__content---1f6rG > div:first-of-type {\n        height: 85%; }\n  .main__section---1Pc3C .left__wrapper---1BV9K {\n    background-color: #a6bcce;\n    width: 65%;\n    float: left; }\n    .main__section---1Pc3C .left__wrapper---1BV9K .left__content---1f6rG {\n      justify-self: end;\n      width: 80%; }\n      .main__section---1Pc3C .left__wrapper---1BV9K .left__content---1f6rG > div:first-of-type {\n        background-color: white;\n        box-shadow: 1px 0 0 1px white; }\n  .main__section---1Pc3C .right__wrapper---3GEta {\n    background-color: white;\n    width: 35%;\n    float: right; }\n    .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI {\n      justify-self: start;\n      width: 85%; }\n      .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI > div:first-of-type {\n        background-color: black; }\n      .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI .slider---2OjlS {\n        background-color: white;\n        width: 80%;\n        height: 25%; }\n        .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI .slider---2OjlS .tag---Te4GM {\n          background-color: #afadad;\n          display: inline-block;\n          height: 100%;\n          vertical-align: top;\n          width: 80%;\n          color: white;\n          box-shadow: -1px 1px 0 0.8px #afadad;\n          padding: 10px; }\n          .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI .slider---2OjlS .tag---Te4GM h2 {\n            font-size: 2rem; }\n        .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI .slider---2OjlS .arrows---153q0 {\n          background-color: white;\n          display: inline-block;\n          height: 100%;\n          padding: 15px;\n          box-sizing: border-box; }\n          .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI .slider---2OjlS .arrows---153q0 svg {\n            display: block; }\n            .main__section---1Pc3C .right__wrapper---3GEta .right__content---2oQHI .slider---2OjlS .arrows---153q0 svg:hover {\n              color: #a6bcce; }\n", ""]);
+
+// exports
+exports.locals = {
+	"main__section": "main__section---1Pc3C",
+	"left__wrapper": "left__wrapper---1BV9K",
+	"right__wrapper": "right__wrapper---3GEta",
+	"right__content": "right__content---2oQHI",
+	"left__content": "left__content---1f6rG",
+	"slider": "slider---2OjlS",
+	"tag": "tag---Te4GM",
+	"arrows": "arrows---153q0"
+};
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _clientMainSection = __webpack_require__(105);
+
+var _clientMainSection2 = _interopRequireDefault(_clientMainSection);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ClientMainLeft = function (_React$Component) {
+    _inherits(ClientMainLeft, _React$Component);
+
+    function ClientMainLeft() {
+        _classCallCheck(this, ClientMainLeft);
+
+        return _possibleConstructorReturn(this, (ClientMainLeft.__proto__ || Object.getPrototypeOf(ClientMainLeft)).apply(this, arguments));
+    }
+
+    _createClass(ClientMainLeft, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: _clientMainSection2.default.left__content },
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    'left up'
+                )
+            );
+        }
+    }]);
+
+    return ClientMainLeft;
+}(_react2.default.Component);
+
+exports.default = ClientMainLeft;
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _clientMainSection = __webpack_require__(105);
+
+var _clientMainSection2 = _interopRequireDefault(_clientMainSection);
+
+var _reactFontawesome = __webpack_require__(36);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _faAngleUp = __webpack_require__(116);
+
+var _faAngleUp2 = _interopRequireDefault(_faAngleUp);
+
+var _faAngleDown = __webpack_require__(117);
+
+var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ClientMainRight = function (_React$Component) {
+    _inherits(ClientMainRight, _React$Component);
+
+    function ClientMainRight(props) {
+        _classCallCheck(this, ClientMainRight);
+
+        var _this = _possibleConstructorReturn(this, (ClientMainRight.__proto__ || Object.getPrototypeOf(ClientMainRight)).call(this, props));
+
+        _this.upClickhandler = function (e) {};
+
+        _this.downClickhandler = function (e) {};
+
+        return _this;
+    }
+
+    _createClass(ClientMainRight, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: _clientMainSection2.default.right__content },
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    'CO\u015A DO UPDATU'
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: _clientMainSection2.default.slider },
+                    _react2.default.createElement(
+                        'div',
+                        { className: _clientMainSection2.default.tag },
+                        _react2.default.createElement(
+                            'h2',
+                            null,
+                            'NAME TAG BLA BLA'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: _clientMainSection2.default.arrows },
+                        _react2.default.createElement(_reactFontawesome2.default, { icon: _faAngleUp2.default, className: 'fa-3x', onClick: this.upClickhandler }),
+                        _react2.default.createElement(_reactFontawesome2.default, { icon: _faAngleDown2.default, className: 'fa-3x', onClick: this.downClickhandler })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return ClientMainRight;
+}(_react2.default.Component);
+
+exports.default = ClientMainRight;
+
+/***/ }),
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _header = __webpack_require__(114);
+
+var _header2 = _interopRequireDefault(_header);
+
+var _reactFontawesome = __webpack_require__(36);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _faStar = __webpack_require__(118);
+
+var _faStar2 = _interopRequireDefault(_faStar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Header = function (_React$Component) {
+    _inherits(Header, _React$Component);
+
+    function Header() {
+        _classCallCheck(this, Header);
+
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+    }
+
+    _createClass(Header, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'header',
+                { className: _header2.default.header },
+                _react2.default.createElement(
+                    'div',
+                    { className: _header2.default.wrapper },
+                    _react2.default.createElement(_reactFontawesome2.default, { icon: _faStar2.default, className: 'fa-3x' }),
+                    _react2.default.createElement(
+                        'div',
+                        { className: _header2.default.logo },
+                        this.props.logo
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: _header2.default.searchBox },
+                        _react2.default.createElement(
+                            'form',
+                            null,
+                            _react2.default.createElement('input', { className: _header2.default.searchInput, type: 'text', placeholder: 'search something' })
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Header;
+}(_react2.default.Component);
+
+exports.default = Header;
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(115);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(11)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?modules&localIdentName=[local]---[hash:base64:5]!./header.scss", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/postcss-loader/lib/index.js!../../node_modules/sass-loader/lib/loader.js?modules&localIdentName=[local]---[hash:base64:5]!./header.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(10)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".header---1oOWC {\n  position: fixed;\n  background-color: transparent;\n  width: 100%;\n  padding: 20px 25px; }\n  .header---1oOWC .wrapper---3uk5p {\n    display: -ms-grid;\n    display: grid;\n    -ms-grid-columns: (1fr)[3];\n        grid-template-columns: repeat(3, 1fr); }\n    .header---1oOWC .wrapper---3uk5p .logo---144bb {\n      font-family: 'Playfair Display SC', serif;\n      font-size: 2rem;\n      text-align: center; }\n    .header---1oOWC .wrapper---3uk5p .searchBox---2kZvo .searchInput---xNQlf {\n      width: 80%;\n      marign: 0 auto; }\n", ""]);
+
+// exports
+exports.locals = {
+	"header": "header---1oOWC",
+	"wrapper": "wrapper---3uk5p",
+	"logo": "logo---144bb",
+	"searchBox": "searchBox---2kZvo",
+	"searchInput": "searchInput---xNQlf"
+};
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'angle-up', icon: [320, 512, [], "f106", "M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"] };
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'angle-down', icon: [320, 512, [], "f107", "M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"] };
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'star', icon: [576, 512, [], "f005", "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"] };
 
 /***/ })
 /******/ ]);

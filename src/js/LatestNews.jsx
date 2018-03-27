@@ -4,6 +4,9 @@ import news from '../dataNews.json';
 import LatestNewsItem from './LatestNewsItem.jsx';
 
 class LatestNews extends React.Component {
+  convertDate = (nr) =>{
+
+  }
     render() {
         return(<section id="latest_news" className={scss.wrapper}>
             <h2 className={scss.heading}>Latest news</h2>
@@ -11,7 +14,7 @@ class LatestNews extends React.Component {
             <div className={scss.newsGrid}>
             {Object.values(news).map((element,i)=>{
                 if(i<6){
-                    return <LatestNewsItem key={i} heading={element.heading} image={element.image} altImage={element.altImage}/>
+                    return <LatestNewsItem key={i} heading={element.heading} image={element.image} altImage={element.altImage} daysAgo={this.convertDate(element.daysAgo)}/>
                 }
             })}
             </div>

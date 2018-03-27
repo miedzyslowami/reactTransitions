@@ -9,10 +9,15 @@ class LatestNewsItem extends React.Component {
     render() {
         return(
           <div className={scss.newsItem}>
-            <figure>
-            <img className={scss.img} src={this.props.image} alt={this.props.altImage}/>           </figure>
-            <a className={scss.heading} href="https://pixelbay.com">
-            {this.props.heading}</a>
+            <div className={scss.left__box}>
+                <img className={scss.img} src={this.props.image} alt={this.props.altImage}/>
+            </div>
+            <div className={scss.right__box}>
+                <a className={scss.heading} href="https://pixelbay.com">
+                {this.props.heading}</a>
+            <div>{this.props.daysAgo}</div>
+            </div>
+
             </div>)
     }
 }
