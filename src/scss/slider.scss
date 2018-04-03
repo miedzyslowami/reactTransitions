@@ -1,0 +1,50 @@
+$size: 150px; // cube length
+.scene{
+  margin: 100px;
+ width: $size;
+ height: $size;
+
+ perspective: 600px;
+.cube {
+    perspective: 600px;
+transform: rotateY(180deg);
+position: relative;
+ width: inherit;
+ height: inherit;
+
+ transform-style: preserve-3d;
+ transform: rotateY(180deg);
+  transition: transform 0.6s;
+.cube__face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: red;
+  opacity: 0.8;
+}
+.cube__face__front {
+  background: yellow;
+  transform: translate3d(0, 0, $size/2);
+}
+.cube__face__back {
+  background: orange;
+  transform: rotateY(180deg) translate3d(0, 0, $size/2);
+}
+.cube__face__left {
+  background: green;
+  transform: rotateY(-90deg) translate3d(0, 0, $size/2);
+}
+.cube__face__right {
+  background: magenta;
+  transform: rotateY(90deg) translate3d(0, 0, $size/2);
+}
+.cube__face__top {
+  background: blue;
+  transform: rotateX(90deg) translate3d(0, 0, $size/2);
+}
+.cube__face__bottom {
+  background: red;
+  transform: rotateX(-90deg) translate3d(0, 0, $size/2);
+}
+}
+}

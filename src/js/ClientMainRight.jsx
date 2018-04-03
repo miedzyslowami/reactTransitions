@@ -3,7 +3,7 @@ import scss from '../scss/clientMainSection.scss';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faAngleUp from '../../node_modules/@fortawesome/fontawesome-free-solid/faAngleUp';
 import faAngleDown from '../../node_modules/@fortawesome/fontawesome-free-solid/faAngleDown';
-
+import Slider from './Slider.jsx';
 class ClientMainRight extends React.Component {
     constructor(props){
         super(props)
@@ -16,7 +16,7 @@ class ClientMainRight extends React.Component {
     }
     render() {
         return(<div className={scss.right__content}>
-            <div>COŚ DO UPDATU</div>
+            <div><Slider /></div>
             <div className={scss.slider}>
             <div className={scss.tag}><h2>NAME TAG BLA BLA</h2></div>
             <div className={scss.arrows}>

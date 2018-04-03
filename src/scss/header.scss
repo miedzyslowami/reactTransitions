@@ -1,5 +1,5 @@
 .header{
-  position: fixed;
+  position: absolute;
   background-color: transparent;
   width: 100%;
   padding: 20px 25px;
@@ -12,10 +12,33 @@
       text-align: center;
         }
         .searchBox{
-
+          &:after{
+            clear:both;
+            content:"";
+            display: block;
+          }
           .searchInput{
-            width:80%;
-            marign:0 auto;
+            width:20%;
+            border:none;
+            outline:none;
+            transition: width .5s linear;
+            margin:0 auto;
+            float:right;
+            line-height: 2rem;
+            border-bottom: 2px solid black;
+
+            &:focus,&:not([value=""]){
+              width:80%;
+            }
+            &::placeholder{
+              letter-spacing:2px;
+              font-weight: bold;
+              font-size: 2rem;
+            }
+          }
+          svg{
+            float:right;
+            height: 2rem;
           }
         }
   }

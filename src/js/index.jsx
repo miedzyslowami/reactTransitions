@@ -13,9 +13,16 @@ import scss from '../scss/index.scss';
 
 
 class App extends React.Component {
+  constructor(props){
+    super(props)
+
+  }
+  searchHandler = (searchValue) =>{
+    console.log(searchValue);
+  }
     render() {
         return(<div className={scss.template}>
-            <Header logo="MI Talent"/>
+            <Header logo="MI Talent" searchHandler={this.searchHandler}/>
             <ClientMain/>
             <LatestNews/>
             <Switch>

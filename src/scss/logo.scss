@@ -1,0 +1,21 @@
+
+    .logo {
+      font-family: 'Playfair Display SC', serif;
+      font-size: 2rem;
+      float: left;
+    }
+
+
+@media all and (max-width:768px) {
+
+      .logo
+       {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        padding: 0;
+        border: none;
+        text-align: center;
+      }
+
+}
