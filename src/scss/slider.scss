@@ -1,50 +1,54 @@
-$size: 150px; // cube length
-.scene{
-  margin: 100px;
- width: $size;
- height: $size;
+.scene {
+	perspective: 800px;
+	perspective-origin: 50% 100px;
 
- perspective: 600px;
 .cube {
-    perspective: 600px;
-transform: rotateY(180deg);
-position: relative;
- width: inherit;
- height: inherit;
+	position: relative;
+	width: 200px;
+	transform-style: preserve-3d;
+	margin: 25% auto; /* keeps the cube centered */
+	transform-origin: 0 100px;
+	animation: spin-vertical 5s infinite linear;
 
- transform-style: preserve-3d;
- transform: rotateY(180deg);
-  transition: transform 0.6s;
-.cube__face {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  background: red;
-  opacity: 0.8;
+.cube__face{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-color: white;
 }
-.cube__face__front {
-  background: yellow;
-  transform: translate3d(0, 0, $size/2);
-}
+
 .cube__face__back {
-  background: orange;
-  transform: rotateY(180deg) translate3d(0, 0, $size/2);
-}
-.cube__face__left {
-  background: green;
-  transform: rotateY(-90deg) translate3d(0, 0, $size/2);
+	background-color: red;
+	transform: translateZ(-100px) rotateX(180deg);
 }
 .cube__face__right {
-  background: magenta;
-  transform: rotateY(90deg) translate3d(0, 0, $size/2);
+	background-color: yellow;
+	transform: rotateY(-270deg) translateX(100px);
+	transform-origin: top right;
+}
+.cube__face__left {
+	background-color: green;
+	transform: rotateY(270deg) translateX(-100px);
+	transform-origin: center left;
 }
 .cube__face__top {
-  background: blue;
-  transform: rotateX(90deg) translate3d(0, 0, $size/2);
+	background-color: pink;
+	transform: rotateX(-270deg) translateY(-100px);
+	transform-origin: top center;
 }
 .cube__face__bottom {
-  background: red;
-  transform: rotateX(-90deg) translate3d(0, 0, $size/2);
+	background-color: blue;
+	transform: rotateX(-90deg) translateY(100px);
+	transform-origin: bottom center;
+}
+.cube__face__front {
+	background-color: orange;
+	transform: translateZ(100px);
 }
 }
+}
+
+@keyframes spin-vertical {
+	from { transform: rotateX(0); }
+	to { transform: rotateX(-360deg); }
 }

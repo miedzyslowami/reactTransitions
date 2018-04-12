@@ -9,10 +9,10 @@ class ClientMainRight extends React.Component {
         super(props)
     }
     upClickhandler = (e) =>{
-
+      this.props.upClickhandler();
     }
     downClickhandler = (e) =>{
-
+      this.props.downClickhandler();
     }
     render() {
         return(<div className={scss.right__content}>
