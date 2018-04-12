@@ -16,7 +16,12 @@ class ClientMainRight extends React.Component {
     }
     render() {
         return(<div className={scss.right__content}>
-            <div><Slider /></div>
+            <div><Slider
+            picture1="../src/img/1.jpg"
+            picture2="../src/img/2.jpg"
+            picture3="../src/img/3.jpg"
+            picture4="../src/img/6.jpg"/>
+            </div>
             <div className={scss.slider}>
             <div className={scss.tag}><h2>NAME TAG BLA BLA</h2></div>
             <div className={scss.arrows}>

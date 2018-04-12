@@ -1,6 +1,9 @@
 import React from 'react';
 import scss from '../scss/slider.scss';
 class Slider extends React.Component {
+    constructor(props){
+        super(props)
+    }
         render() {
             return ( <div className={scss.scene}>
                   <div className={scss.cube}>

@@ -15,6 +15,11 @@
 	width: 200px;
 	height: 200px;
 	background-color: white;
+ .picture{
+	 width: 200px;
+		height: 200px;
+		object-fit: cover;
+ }
 }
 
 .cube__face__back {
