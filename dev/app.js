@@ -27334,6 +27334,10 @@ var _clientMainSection = __webpack_require__(24);
 
 var _clientMainSection2 = _interopRequireDefault(_clientMainSection);
 
+var _Slider = __webpack_require__(111);
+
+var _Slider2 = _interopRequireDefault(_Slider);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27360,7 +27364,11 @@ var ClientMainLeft = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     null,
-                    'left up'
+                    _react2.default.createElement(_Slider2.default, { sliderType: 'text',
+                        text_1: 'cccccccccccccccccc',
+                        text_2: 'ffffffffffffffff',
+                        text_3: 'aaaaaaaaaaaa',
+                        text_4: 'sssssssssssssssssssssss' })
                 )
             );
         }
@@ -27461,6 +27469,22 @@ var _Slider = __webpack_require__(111);
 
 var _Slider2 = _interopRequireDefault(_Slider);
 
+var _ = __webpack_require__(107);
+
+var _2 = _interopRequireDefault(_);
+
+var _3 = __webpack_require__(121);
+
+var _4 = _interopRequireDefault(_3);
+
+var _5 = __webpack_require__(122);
+
+var _6 = _interopRequireDefault(_5);
+
+var _7 = __webpack_require__(123);
+
+var _8 = _interopRequireDefault(_7);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27497,11 +27521,11 @@ var ClientMainRight = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     null,
-                    _react2.default.createElement(_Slider2.default, {
-                        picture1: '../src/img/1.jpg',
-                        picture2: '../src/img/2.jpg',
-                        picture3: '../src/img/3.jpg',
-                        picture4: '../src/img/6.jpg' })
+                    _react2.default.createElement(_Slider2.default, { sliderType: 'pictures',
+                        picture1: _2.default,
+                        picture2: _4.default,
+                        picture3: _6.default,
+                        picture4: _8.default })
                 ),
                 _react2.default.createElement(
                     'div',
@@ -27572,13 +27596,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var style = _slider2.default;
+
 var Slider = function (_React$Component) {
     _inherits(Slider, _React$Component);
 
     function Slider(props) {
         _classCallCheck(this, Slider);
 
-        return _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
+
+        _this.renderCube = function (type) {
+            var scss = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : style;
+
+            var cube = [];
+            for (var i = 1; i < 6; i++) {
+                cube.push(_react2.default.createElement(
+                    'div',
+                    { key: i, className: scss['cube__face__' + i] },
+                    type == 'pictures' ? _this.renderImages(_this.props['picture' + i], scss) : _this.rederText(_this.props['text_' + i])
+                ));
+            }
+            return cube;
+        };
+
+        _this.renderImages = function (picture, scss) {
+            return _react2.default.createElement('img', { className: scss.picture, src: picture });
+        };
+
+        _this.rederText = function (text, scss) {
+            return _react2.default.createElement(
+                'p',
+                null,
+                '`$',
+                text,
+                '`'
+            );
+        };
+
+        return _this;
     }
 
     _createClass(Slider, [{
@@ -27590,29 +27646,7 @@ var Slider = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { className: _slider2.default.cube },
-                    _react2.default.createElement(
-                        'div',
-                        { className: _slider2.default.cube__face + ' ' + _slider2.default.cube__face__front },
-                        _react2.default.createElement('img', { className: _slider2.default.picture, src: this.props.picture1 })
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: _slider2.default.cube__face + ' ' + _slider2.default.cube__face__top },
-                        ' ',
-                        _react2.default.createElement('img', { className: _slider2.default.picture, src: this.props.picture2 })
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: _slider2.default.cube__face + ' ' + _slider2.default.cube__face__back },
-                        ' ',
-                        _react2.default.createElement('img', { className: _slider2.default.picture, src: this.props.picture3 })
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: _slider2.default.cube__face + ' ' + _slider2.default.cube__face__bottom },
-                        ' ',
-                        _react2.default.createElement('img', { className: _slider2.default.picture, src: this.props.picture4 })
-                    )
+                    this.renderCube(this.props.sliderType)
                 )
             );
         }
@@ -27682,21 +27716,18 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".scene---tqqcJ {\n  perspective: 800px;\n  perspective-origin: 50% 100px; }\n  .scene---tqqcJ .cube---3UY7W {\n    position: relative;\n    width: 200px;\n    transform-style: preserve-3d;\n    margin: 25% auto;\n    /* keeps the cube centered */\n    transform-origin: 0 100px;\n    animation: spin-vertical---1kuhf 5s infinite linear; }\n    .scene---tqqcJ .cube---3UY7W .cube__face---3HT9W {\n      position: absolute;\n      width: 200px;\n      height: 200px;\n      background-color: white; }\n      .scene---tqqcJ .cube---3UY7W .cube__face---3HT9W .picture---3rMNd {\n        width: 200px;\n        height: 200px;\n        -o-object-fit: cover;\n           object-fit: cover; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__back---3ukNA {\n      background-color: red;\n      transform: translateZ(-100px) rotateX(180deg); }\n    .scene---tqqcJ .cube---3UY7W .cube__face__right---ijHhv {\n      background-color: yellow;\n      transform: rotateY(-270deg) translateX(100px);\n      transform-origin: top right; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__left---nls9t {\n      background-color: green;\n      transform: rotateY(270deg) translateX(-100px);\n      transform-origin: center left; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__top---1vd2X {\n      background-color: pink;\n      transform: rotateX(-270deg) translateY(-100px);\n      transform-origin: top center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__bottom---1huEh {\n      background-color: blue;\n      transform: rotateX(-90deg) translateY(100px);\n      transform-origin: bottom center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__front---9wMf1 {\n      background-color: orange;\n      transform: translateZ(100px); }\n\n@keyframes spin-vertical---1kuhf {\n  from {\n    transform: rotateX(0); }\n  to {\n    transform: rotateX(-360deg); } }\n", ""]);
+exports.push([module.i, ".scene---tqqcJ {\n  perspective: 800px;\n  perspective-origin: 50% 100px; }\n  .scene---tqqcJ .cube---3UY7W {\n    position: relative;\n    width: 200px;\n    transform-style: preserve-3d;\n    margin: 25% auto;\n    /* keeps the cube centered */\n    transform-origin: 0 100px;\n    animation: spin-vertical---1kuhf 5s infinite linear; }\n    .scene---tqqcJ .cube---3UY7W > div {\n      position: absolute;\n      width: 200px;\n      height: 200px;\n      background-color: white; }\n      .scene---tqqcJ .cube---3UY7W > div .picture---3rMNd {\n        width: 200px;\n        height: 200px;\n        -o-object-fit: cover;\n           object-fit: cover; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__3---2rQKb {\n      background-color: red;\n      transform: translateZ(-100px) rotateX(180deg); }\n    .scene---tqqcJ .cube---3UY7W .cube__face__2---A6OGw {\n      background-color: pink;\n      transform: rotateX(-270deg) translateY(-100px);\n      transform-origin: top center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__4---1iifN {\n      background-color: blue;\n      transform: rotateX(-90deg) translateY(100px);\n      transform-origin: bottom center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__1---2Wxr9 {\n      background-color: orange;\n      transform: translateZ(100px); }\n\n@keyframes spin-vertical---1kuhf {\n  from {\n    transform: rotateX(0); }\n  to {\n    transform: rotateX(-360deg); } }\n", ""]);
 
 // exports
 exports.locals = {
 	"scene": "scene---tqqcJ",
 	"cube": "cube---3UY7W",
 	"spin-vertical": "spin-vertical---1kuhf",
-	"cube__face": "cube__face---3HT9W",
 	"picture": "picture---3rMNd",
-	"cube__face__back": "cube__face__back---3ukNA",
-	"cube__face__right": "cube__face__right---ijHhv",
-	"cube__face__left": "cube__face__left---nls9t",
-	"cube__face__top": "cube__face__top---1vd2X",
-	"cube__face__bottom": "cube__face__bottom---1huEh",
-	"cube__face__front": "cube__face__front---9wMf1"
+	"cube__face__3": "cube__face__3---2rQKb",
+	"cube__face__2": "cube__face__2---A6OGw",
+	"cube__face__4": "cube__face__4---1iifN",
+	"cube__face__1": "cube__face__1---2Wxr9"
 };
 
 /***/ }),
@@ -27943,6 +27974,24 @@ exports.push([module.i, "body, * {\n  font-size: 16px;\n  margin: 0;\n  padding:
 
 // exports
 
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/2.jpg";
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/3.jpg";
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/4.jpg";
 
 /***/ })
 /******/ ]);

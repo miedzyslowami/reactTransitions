@@ -4,6 +4,11 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faAngleUp from '../../node_modules/@fortawesome/fontawesome-free-solid/faAngleUp';
 import faAngleDown from '../../node_modules/@fortawesome/fontawesome-free-solid/faAngleDown';
 import Slider from './Slider.jsx';
+import pic1 from '../img/1.jpg';
+import pic2 from '../img/2.jpg';
+import pic3 from '../img/3.jpg';
+import pic4 from '../img/4.jpg';
+
 class ClientMainRight extends React.Component {
     constructor(props){
         super(props)
@@ -16,11 +21,11 @@ class ClientMainRight extends React.Component {
     }
     render() {
         return(<div className={scss.right__content}>
-            <div><Slider
-            picture1="../src/img/1.jpg"
-            picture2="../src/img/2.jpg"
-            picture3="../src/img/3.jpg"
-            picture4="../src/img/6.jpg"/>
+            <div><Slider sliderType="pictures"
+            picture1={pic1}
+            picture2={pic2}
+            picture3={pic3}
+            picture4={pic4}/>
             </div>
             <div className={scss.slider}>
             <div className={scss.tag}><h2>NAME TAG BLA BLA</h2></div>

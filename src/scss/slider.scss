@@ -10,7 +10,7 @@
 	transform-origin: 0 100px;
 	animation: spin-vertical 5s infinite linear;
 
-.cube__face{
+& > div{
 	position: absolute;
 	width: 200px;
 	height: 200px;
@@ -22,31 +22,22 @@
  }
 }
 
-.cube__face__back {
+.cube__face__3 {
 	background-color: red;
 	transform: translateZ(-100px) rotateX(180deg);
 }
-.cube__face__right {
-	background-color: yellow;
-	transform: rotateY(-270deg) translateX(100px);
-	transform-origin: top right;
-}
-.cube__face__left {
-	background-color: green;
-	transform: rotateY(270deg) translateX(-100px);
-	transform-origin: center left;
-}
-.cube__face__top {
+
+.cube__face__2 {
 	background-color: pink;
 	transform: rotateX(-270deg) translateY(-100px);
 	transform-origin: top center;
 }
-.cube__face__bottom {
+.cube__face__4 {
 	background-color: blue;
 	transform: rotateX(-90deg) translateY(100px);
 	transform-origin: bottom center;
 }
-.cube__face__front {
+.cube__face__1 {
 	background-color: orange;
 	transform: translateZ(100px);
 }
