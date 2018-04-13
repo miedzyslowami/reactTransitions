@@ -19,6 +19,7 @@
       height:70%;
       & > div:first-of-type{
         height:85%;
+        display: grid;
       }
     }
   }
@@ -32,6 +33,7 @@
     & > div:first-of-type{
     background-color: white;
     box-shadow: 1px 0 0 1px white;
+
 }
     }
   }

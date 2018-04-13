@@ -8,7 +8,8 @@ class ClientMainLeft extends React.Component {
                   text_1='cccccccccccccccccc'
                   text_2='ffffffffffffffff'
                   text_3='aaaaaaaaaaaa'
-                  text_4='sssssssssssssssssssssss'/>
+                  text_4='sssssssssssssssssssssss'
+                  cubeshape="cube___rectangle"/>
                   </div></div>)
     }
 }

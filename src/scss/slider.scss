@@ -6,7 +6,7 @@
 	position: relative;
 	width: 200px;
 	transform-style: preserve-3d;
-	margin: 25% auto; /* keeps the cube centered */
+	margin: 110px auto;
 	transform-origin: 0 100px;
 	animation: spin-vertical 5s infinite linear;
 
@@ -41,6 +41,12 @@
 	background-color: orange;
 	transform: translateZ(100px);
 }
+}
+.cube__rectangle{
+	width: 400px;
+	& > div{
+		width: 200px;
+	}
 }
 }
 

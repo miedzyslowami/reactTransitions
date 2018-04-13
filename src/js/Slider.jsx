@@ -20,12 +20,12 @@ class Slider extends React.Component {
         return  <img className={scss.picture} src={picture}/>;
     }
     rederText = (text, scss) =>{
-        return <p>`${text}`</p>;
+        return <p>{text}</p>;
     }
 
         render() {
             return ( <div className={scss.scene}>
-                  <div className={scss.cube}>
+                  <div className={`${scss.cube} ${scss[this.props.cubeshape]}`}>
                      {this.renderCube(this.props.sliderType)}
                         </div>
      </div> )
