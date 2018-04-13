@@ -23,29 +23,30 @@
 }
 
 .cube__face__3 {
-	background-color: red;
-	transform: translateZ(-100px) rotateX(180deg);
+		transform: translateZ(-100px) rotateX(180deg);
 }
 
 .cube__face__2 {
-	background-color: pink;
-	transform: rotateX(-270deg) translateY(-100px);
+		transform: rotateX(-270deg) translateY(-100px);
 	transform-origin: top center;
 }
 .cube__face__4 {
-	background-color: blue;
-	transform: rotateX(-90deg) translateY(100px);
+		transform: rotateX(-90deg) translateY(100px);
 	transform-origin: bottom center;
 }
 .cube__face__1 {
-	background-color: orange;
 	transform: translateZ(100px);
 }
 }
 .cube__rectangle{
 	width: 400px;
 	& > div{
-		width: 200px;
+		width: 400px;
+		h2{
+			font-size: 2.5rem;
+    color: #a6bcce;
+    margin-bottom: 10px;
+		}
 	}
 }
 }

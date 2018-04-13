@@ -7,20 +7,25 @@ class Slider extends React.Component {
     }
     renderCube = (type,scss = style)=>{
         let cube = [];
-        for(let i = 1;i<6;i++){
+        for(let i = 1;i<5;i++){
             cube.push((<div key={i} className={scss[`cube__face__${i}`]}>
             {type =='pictures'
             ? this.renderImages(this.props[`picture${i}`],scss)
-            : this.rederText(this.props[`text_${i}`])}
+            : this.renderText(this.props[`text_${i}`],scss)}
             </div>));
         }
         return cube;
     }
-    renderImages = (picture,scss) =>{
+    renderImages = (picture,scss = style) =>{
         return  <img className={scss.picture} src={picture}/>;
     }
-    rederText = (text, scss) =>{
-        return <p>{text}</p>;
+    renderText = (text, scss = style) =>{
+        let {title,subtitle} = text;
+        console.log(title,subtitle);
+        return (<div>
+        <h2 className={scss.slider__title}>{title}</h2>
+        <h3 className={scss.slider__subtitle}>{subtitle}</h3>
+        </div>);
     }
 
         render() {

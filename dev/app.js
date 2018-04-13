@@ -3464,25 +3464,41 @@ var Slider = function (_React$Component) {
             var scss = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : style;
 
             var cube = [];
-            for (var i = 1; i < 6; i++) {
+            for (var i = 1; i < 5; i++) {
                 cube.push(_react2.default.createElement(
                     'div',
                     { key: i, className: scss['cube__face__' + i] },
-                    type == 'pictures' ? _this.renderImages(_this.props['picture' + i], scss) : _this.rederText(_this.props['text_' + i])
+                    type == 'pictures' ? _this.renderImages(_this.props['picture' + i], scss) : _this.renderText(_this.props['text_' + i], scss)
                 ));
             }
             return cube;
         };
 
-        _this.renderImages = function (picture, scss) {
+        _this.renderImages = function (picture) {
+            var scss = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : style;
+
             return _react2.default.createElement('img', { className: scss.picture, src: picture });
         };
 
-        _this.rederText = function (text, scss) {
+        _this.renderText = function (text) {
+            var scss = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : style;
+            var title = text.title,
+                subtitle = text.subtitle;
+
+            console.log(title, subtitle);
             return _react2.default.createElement(
-                'p',
+                'div',
                 null,
-                text
+                _react2.default.createElement(
+                    'h2',
+                    { className: scss.slider__title },
+                    title
+                ),
+                _react2.default.createElement(
+                    'h3',
+                    { className: scss.slider__subtitle },
+                    subtitle
+                )
             );
         };
 
@@ -27459,11 +27475,11 @@ var ClientMainLeft = function (_React$Component) {
                     'div',
                     null,
                     _react2.default.createElement(_Slider2.default, { sliderType: 'text',
-                        text_1: 'cccccccccccccccccc',
-                        text_2: 'ffffffffffffffff',
-                        text_3: 'aaaaaaaaaaaa',
-                        text_4: 'sssssssssssssssssssssss',
-                        cubeshape: 'cube___rectangle' })
+                        text_1: { title: 'Paris Fashion Week', subtitle: 'Lorem fsdfsdfs afsfasfasffsd sdfsdfaffdfa' },
+                        text_2: { title: 'New trends in Fashion', subtitle: 'dfsdfsdfsdfaf asfasfsa asf asf asf afsdf' },
+                        text_3: { title: 'Black or White', subtitle: 'fsdfaas fasdfasfsd asfsdf sdf sdf fsf f asffaf' },
+                        text_4: { title: 'Never too old to wear that', subtitle: ' asf sdf af sdf a ff asf asf as f' },
+                        cubeshape: 'cube__rectangle' })
                 )
             );
         }
@@ -27580,7 +27596,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".scene---tqqcJ {\n  perspective: 800px;\n  perspective-origin: 50% 100px; }\n  .scene---tqqcJ .cube---3UY7W {\n    position: relative;\n    width: 200px;\n    transform-style: preserve-3d;\n    margin: 110px auto;\n    transform-origin: 0 100px;\n    animation: spin-vertical---1kuhf 5s infinite linear; }\n    .scene---tqqcJ .cube---3UY7W > div {\n      position: absolute;\n      width: 200px;\n      height: 200px;\n      background-color: white; }\n      .scene---tqqcJ .cube---3UY7W > div .picture---3rMNd {\n        width: 200px;\n        height: 200px;\n        -o-object-fit: cover;\n           object-fit: cover; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__3---2rQKb {\n      background-color: red;\n      transform: translateZ(-100px) rotateX(180deg); }\n    .scene---tqqcJ .cube---3UY7W .cube__face__2---A6OGw {\n      background-color: pink;\n      transform: rotateX(-270deg) translateY(-100px);\n      transform-origin: top center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__4---1iifN {\n      background-color: blue;\n      transform: rotateX(-90deg) translateY(100px);\n      transform-origin: bottom center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__1---2Wxr9 {\n      background-color: orange;\n      transform: translateZ(100px); }\n  .scene---tqqcJ .cube__rectangle---3Xi82 {\n    width: 400px; }\n    .scene---tqqcJ .cube__rectangle---3Xi82 > div {\n      width: 200px; }\n\n@keyframes spin-vertical---1kuhf {\n  from {\n    transform: rotateX(0); }\n  to {\n    transform: rotateX(-360deg); } }\n", ""]);
+exports.push([module.i, ".scene---tqqcJ {\n  perspective: 800px;\n  perspective-origin: 50% 100px; }\n  .scene---tqqcJ .cube---3UY7W {\n    position: relative;\n    width: 200px;\n    transform-style: preserve-3d;\n    margin: 110px auto;\n    transform-origin: 0 100px;\n    animation: spin-vertical---1kuhf 5s infinite linear; }\n    .scene---tqqcJ .cube---3UY7W > div {\n      position: absolute;\n      width: 200px;\n      height: 200px;\n      background-color: white; }\n      .scene---tqqcJ .cube---3UY7W > div .picture---3rMNd {\n        width: 200px;\n        height: 200px;\n        -o-object-fit: cover;\n           object-fit: cover; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__3---2rQKb {\n      transform: translateZ(-100px) rotateX(180deg); }\n    .scene---tqqcJ .cube---3UY7W .cube__face__2---A6OGw {\n      transform: rotateX(-270deg) translateY(-100px);\n      transform-origin: top center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__4---1iifN {\n      transform: rotateX(-90deg) translateY(100px);\n      transform-origin: bottom center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__1---2Wxr9 {\n      transform: translateZ(100px); }\n  .scene---tqqcJ .cube__rectangle---3Xi82 {\n    width: 400px; }\n    .scene---tqqcJ .cube__rectangle---3Xi82 > div {\n      width: 400px; }\n      .scene---tqqcJ .cube__rectangle---3Xi82 > div h2 {\n        font-size: 2.5rem;\n        color: #a6bcce;\n        margin-bottom: 10px; }\n\n@keyframes spin-vertical---1kuhf {\n  from {\n    transform: rotateX(0); }\n  to {\n    transform: rotateX(-360deg); } }\n", ""]);
 
 // exports
 exports.locals = {
