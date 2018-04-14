@@ -6,19 +6,19 @@ class ClientMain extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      currentSlide:1
+      currentSlide:-90
     }
   }
   upClickhandler = () =>{
     console.log('up');
     this.setState((prevState) => ({
-  currentSlide: prevState.currentSlide + 1
+  currentSlide: prevState.currentSlide + 90
 }));
   }
   downClickhandler = ()=>{
     console.log('down');
     this.setState((prevState) => ({
-  currentSlide: prevState.currentSlide - 1
+  currentSlide: prevState.currentSlide - 90
 }));
   }
   shouldComponentUpdate(){
@@ -27,8 +27,13 @@ class ClientMain extends React.Component {
   }
     render() {
         return(<section className={scss.main__section}>
-                <div className={scss.left__wrapper}><ClientMainLeft/></div>
-                <div className={scss.right__wrapper}><ClientMainRight upClickhandler={this.upClickhandler} downClickhandler={this.downClickhandler}/></div>
+                <div className={scss.left__wrapper}>
+                <ClientMainLeft
+                currentSlide={this.state.currentSlide}/></div>
+                <div className={scss.right__wrapper}>
+                <ClientMainRight
+                 upClickhandler={this.upClickhandler} downClickhandler={this.downClickhandler}
+                 currentSlide={this.state.currentSlide}/></div>
             </section>)
     }
 }

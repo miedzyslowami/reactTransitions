@@ -1,9 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import scss from '../scss/slider.scss';
 const style = scss;
 class Slider extends React.Component {
     constructor(props){
         super(props)
+
     }
     renderCube = (type,scss = style)=>{
         let cube = [];
@@ -25,12 +27,13 @@ class Slider extends React.Component {
         return (<div>
         <h2 className={scss.slider__title}>{title}</h2>
         <h3 className={scss.slider__subtitle}>{subtitle}</h3>
+        <Link className={scss.slider__button} to="/about">About us</Link>
         </div>);
     }
 
         render() {
             return ( <div className={scss.scene}>
-                  <div className={`${scss.cube} ${scss[this.props.cubeshape]}`}>
+                  <div style={{transform:`rotateX(${this.props.currentSlide}deg)`}} className={`${scss.cube} ${scss[this.props.cubeshape]}`}>
                      {this.renderCube(this.props.sliderType)}
                         </div>
      </div> )

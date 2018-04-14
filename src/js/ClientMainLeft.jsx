@@ -9,7 +9,9 @@ class ClientMainLeft extends React.Component {
                   text_2={{title:'New trends in Fashion',subtitle:'dfsdfsdfsdfaf asfasfsa asf asf asf afsdf'}}
                   text_3={{title:'Black or White',subtitle:'fsdfaas fasdfasfsd asfsdf sdf sdf fsf f asffaf'}}
                   text_4={{title:'Never too old to wear that',subtitle:' asf sdf af sdf a ff asf asf as f'}}
-                  cubeshape="cube__rectangle"/>
+                  cubeshape="cube__rectangle"
+                  currentSlide={this.props.currentSlide}
+                  />
                   </div></div>)
     }
 }

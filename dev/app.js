@@ -3438,6 +3438,8 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(53);
+
 var _slider = __webpack_require__(109);
 
 var _slider2 = _interopRequireDefault(_slider);
@@ -3498,6 +3500,11 @@ var Slider = function (_React$Component) {
                     'h3',
                     { className: scss.slider__subtitle },
                     subtitle
+                ),
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { className: scss.slider__button, to: '/about' },
+                    'About us'
                 )
             );
         };
@@ -3513,7 +3520,7 @@ var Slider = function (_React$Component) {
                 { className: _slider2.default.scene },
                 _react2.default.createElement(
                     'div',
-                    { className: _slider2.default.cube + ' ' + _slider2.default[this.props.cubeshape] },
+                    { style: { transform: 'rotateX(' + this.props.currentSlide + 'deg)' }, className: _slider2.default.cube + ' ' + _slider2.default[this.props.cubeshape] },
                     this.renderCube(this.props.sliderType)
                 )
             );
@@ -27372,7 +27379,7 @@ var ClientMain = function (_React$Component) {
       console.log('up');
       _this.setState(function (prevState) {
         return {
-          currentSlide: prevState.currentSlide + 1
+          currentSlide: prevState.currentSlide + 90
         };
       });
     };
@@ -27381,13 +27388,13 @@ var ClientMain = function (_React$Component) {
       console.log('down');
       _this.setState(function (prevState) {
         return {
-          currentSlide: prevState.currentSlide - 1
+          currentSlide: prevState.currentSlide - 90
         };
       });
     };
 
     _this.state = {
-      currentSlide: 1
+      currentSlide: -90
     };
     return _this;
   }
@@ -27407,12 +27414,15 @@ var ClientMain = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: _clientMainSection2.default.left__wrapper },
-          _react2.default.createElement(_ClientMainLeft2.default, null)
+          _react2.default.createElement(_ClientMainLeft2.default, {
+            currentSlide: this.state.currentSlide })
         ),
         _react2.default.createElement(
           'div',
           { className: _clientMainSection2.default.right__wrapper },
-          _react2.default.createElement(_ClientMainRight2.default, { upClickhandler: this.upClickhandler, downClickhandler: this.downClickhandler })
+          _react2.default.createElement(_ClientMainRight2.default, {
+            upClickhandler: this.upClickhandler, downClickhandler: this.downClickhandler,
+            currentSlide: this.state.currentSlide })
         )
       );
     }
@@ -27479,7 +27489,9 @@ var ClientMainLeft = function (_React$Component) {
                         text_2: { title: 'New trends in Fashion', subtitle: 'dfsdfsdfsdfaf asfasfsa asf asf asf afsdf' },
                         text_3: { title: 'Black or White', subtitle: 'fsdfaas fasdfasfsd asfsdf sdf sdf fsf f asffaf' },
                         text_4: { title: 'Never too old to wear that', subtitle: ' asf sdf af sdf a ff asf asf as f' },
-                        cubeshape: 'cube__rectangle' })
+                        cubeshape: 'cube__rectangle',
+                        currentSlide: this.props.currentSlide
+                    })
                 )
             );
         }
@@ -27596,7 +27608,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".scene---tqqcJ {\n  perspective: 800px;\n  perspective-origin: 50% 100px; }\n  .scene---tqqcJ .cube---3UY7W {\n    position: relative;\n    width: 200px;\n    transform-style: preserve-3d;\n    margin: 110px auto;\n    transform-origin: 0 100px;\n    animation: spin-vertical---1kuhf 5s infinite linear; }\n    .scene---tqqcJ .cube---3UY7W > div {\n      position: absolute;\n      width: 200px;\n      height: 200px;\n      background-color: white; }\n      .scene---tqqcJ .cube---3UY7W > div .picture---3rMNd {\n        width: 200px;\n        height: 200px;\n        -o-object-fit: cover;\n           object-fit: cover; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__3---2rQKb {\n      transform: translateZ(-100px) rotateX(180deg); }\n    .scene---tqqcJ .cube---3UY7W .cube__face__2---A6OGw {\n      transform: rotateX(-270deg) translateY(-100px);\n      transform-origin: top center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__4---1iifN {\n      transform: rotateX(-90deg) translateY(100px);\n      transform-origin: bottom center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__1---2Wxr9 {\n      transform: translateZ(100px); }\n  .scene---tqqcJ .cube__rectangle---3Xi82 {\n    width: 400px; }\n    .scene---tqqcJ .cube__rectangle---3Xi82 > div {\n      width: 400px; }\n      .scene---tqqcJ .cube__rectangle---3Xi82 > div h2 {\n        font-size: 2.5rem;\n        color: #a6bcce;\n        margin-bottom: 10px; }\n\n@keyframes spin-vertical---1kuhf {\n  from {\n    transform: rotateX(0); }\n  to {\n    transform: rotateX(-360deg); } }\n", ""]);
+exports.push([module.i, ".scene---tqqcJ {\n  perspective: 800px;\n  perspective-origin: 50% 110px; }\n  .scene---tqqcJ .cube---3UY7W {\n    position: relative;\n    width: 200px;\n    transform-style: preserve-3d;\n    margin: 110px auto;\n    transform-origin: 0 100px;\n    animation: spin-vertical---1kuhf 5s infinite linear;\n    transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28); }\n    .scene---tqqcJ .cube---3UY7W > div {\n      position: absolute;\n      width: 200px;\n      height: 200px;\n      background-color: white; }\n      .scene---tqqcJ .cube---3UY7W > div .picture---3rMNd {\n        width: 200px;\n        height: 200px;\n        -o-object-fit: cover;\n           object-fit: cover; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__3---2rQKb {\n      transform: translateZ(-100px) rotateX(180deg); }\n    .scene---tqqcJ .cube---3UY7W .cube__face__2---A6OGw {\n      transform: rotateX(-270deg) translateY(-100px);\n      transform-origin: top center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__4---1iifN {\n      transform: rotateX(-90deg) translateY(100px);\n      transform-origin: bottom center; }\n    .scene---tqqcJ .cube---3UY7W .cube__face__1---2Wxr9 {\n      transform: translateZ(100px); }\n  .scene---tqqcJ .cube__rectangle---3Xi82 {\n    width: 400px; }\n    .scene---tqqcJ .cube__rectangle---3Xi82 > div {\n      width: 400px; }\n      .scene---tqqcJ .cube__rectangle---3Xi82 > div h2 {\n        margin-bottom: 10px;\n        font-weight: 100;\n        font-size: 2.5rem;\n        letter-spacing: 1.5px; }\n      .scene---tqqcJ .cube__rectangle---3Xi82 > div h3 {\n        text-transform: uppercase;\n        font-size: .8rem;\n        font-weight: 100; }\n      .scene---tqqcJ .cube__rectangle---3Xi82 > div .slider__button---4lGMm {\n        background-color: #a6bcce;\n        color: white;\n        border: none;\n        border-radius: 2px;\n        padding: 18px 40px;\n        text-transform: uppercase;\n        display: block;\n        margin: 20px 0;\n        font-weight: 600;\n        letter-spacing: 1.5px;\n        text-decoration: none;\n        width: 200px;\n        text-align: center; }\n", ""]);
 
 // exports
 exports.locals = {
@@ -27608,7 +27620,8 @@ exports.locals = {
 	"cube__face__2": "cube__face__2---A6OGw",
 	"cube__face__4": "cube__face__4---1iifN",
 	"cube__face__1": "cube__face__1---2Wxr9",
-	"cube__rectangle": "cube__rectangle---3Xi82"
+	"cube__rectangle": "cube__rectangle---3Xi82",
+	"slider__button": "slider__button---4lGMm"
 };
 
 /***/ }),
@@ -27704,7 +27717,8 @@ var ClientMainRight = function (_React$Component) {
                         picture1: _2.default,
                         picture2: _4.default,
                         picture3: _6.default,
-                        picture4: _8.default })
+                        picture4: _8.default,
+                        currentSlide: this.props.currentSlide })
                 ),
                 _react2.default.createElement(
                     'div',

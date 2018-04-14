@@ -25,7 +25,8 @@ class ClientMainRight extends React.Component {
             picture1={pic1}
             picture2={pic2}
             picture3={pic3}
-            picture4={pic4}/>
+            picture4={pic4}
+            currentSlide={this.props.currentSlide}/>
             </div>
             <div className={scss.slider}>
             <div className={scss.tag}><h2>NAME TAG BLA BLA</h2></div>
