@@ -6,33 +6,42 @@ class ClientMain extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      currentSlide:-90
+      currentSlide:-90,
+      pageNr:1
     }
   }
-  upClickhandler = () =>{
-    console.log('up');
+  arrowHandler = (arrow) =>{
+    let direction = () => arrow == "up" ? 1 : -1;
+    let pageNr = this.state.pageNr;
+    let newPageNr = () => arrow == "up"
+        ? pageNr === 4
+          ? 1
+          : pageNr+=1
+        : pageNr === 1
+          ? 4
+          : pageNr-=1;
     this.setState((prevState) => ({
-  currentSlide: prevState.currentSlide + 90
-}));
-  }
-  downClickhandler = ()=>{
-    console.log('down');
-    this.setState((prevState) => ({
-  currentSlide: prevState.currentSlide - 90
-}));
+  currentSlide: prevState.currentSlide + (direction() * 90),
+  pageNr:newPageNr()
+}))
+
   }
   shouldComponentUpdate(){
-    console.log(this.state.currentSlide);
-    return true;
+      return true;
   }
     render() {
         return(<section className={scss.main__section}>
-                <div className={scss.left__wrapper}>
+              <div className={scss.pageNr__wrapper}>
+              <div className={scss.vr} />
+              <div className={scss.pageNr}>0{this.state.pageNr}</div>
+              </div>
+                  <div className={scss.left__wrapper}>
                 <ClientMainLeft
                 currentSlide={this.state.currentSlide}/></div>
                 <div className={scss.right__wrapper}>
                 <ClientMainRight
                  upClickhandler={this.upClickhandler} downClickhandler={this.downClickhandler}
+                 arrowHandler={this.arrowHandler}
                  currentSlide={this.state.currentSlide}/></div>
             </section>)
     }

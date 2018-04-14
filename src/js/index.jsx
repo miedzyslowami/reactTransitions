@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {HashRouter,Route,Switch, Link} from 'react-router-dom';
 // import Listings from './Listings.jsx';
 // import scss from '../scss/index.scss';
+import Designer from './Designer.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import Footer from './Footer.jsx';
@@ -24,12 +25,12 @@ class App extends React.Component {
         return(<div className={scss.template}>
             <Header logo="MI Talent" searchHandler={this.searchHandler}/>
             <ClientMain/>
-            <LatestNews/>
+            <Designer/>
             <Switch>
                 <Route exact path="/" component={Home} />
                <Route path="/about" component={About} />
            </Switch>
-
+             <LatestNews/>
            <Footer logo="MI Talent"/>
            </div>
       )

@@ -1,31 +1,10 @@
 @import 'mixins';
 @import 'index';
 
-.main__section {
+.about__section {
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   box-sizing: border-box;
-
-  .pageNr__wrapper {
-    position: absolute;
-    margin-left: 40px;
-    bottom: 0;
-    height: 30%;
-
-    .vr {
-      height: 40%;
-      width: 2px;
-      background-color: black;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .pageNr {
-      margin-top: 10px;
-      color: black;
-      transform: rotate(-90deg);
-    }
-  }
 
   &:after {
     clear: both;
@@ -54,16 +33,17 @@
   }
 
   .left__wrapper {
-    background-color: #a6bcce;
-    width: 65%;
+    background-color: white;
+    width: 50%;
     float: left;
 
     .left__content {
-      justify-self: end;
-      width: 80%;
+      width: 50%;
+      background-color: #8e8b8b;
+      justify-self: center;
 
       & > div:first-of-type {
-        background-color: white;
+        background-color: black;
         box-shadow: 1px 0 0 1px white;
       }
     }
@@ -71,15 +51,16 @@
 
   .right__wrapper {
     background-color: white;
-    width: 35%;
+    width: 50%;
     float: right;
 
     .right__content {
-      justify-self: start;
-      width: 85%;
+      width: 50%;
+      background-color: white;
+      justify-self: center;
 
       & > div:first-of-type {
-        background-color: black;
+        background-color: #a6bcce;
         display: grid;
 
         .thumbnail {

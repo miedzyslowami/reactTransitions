@@ -23,10 +23,9 @@ class Slider extends React.Component {
     }
     renderText = (text, scss = style) =>{
         let {title,subtitle} = text;
-        console.log(title,subtitle);
         return (<div>
         <h2 className={scss.slider__title}>{title}</h2>
-        <h3 className={scss.slider__subtitle}>{subtitle}</h3>
+        <h3 className={scss.slider__subtitle}>{subtitle}</h3><div className={scss.hr}/>
         <Link className={scss.slider__button} to="/about">About us</Link>
         </div>);
     }

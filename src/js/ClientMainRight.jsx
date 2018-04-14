@@ -13,12 +13,10 @@ class ClientMainRight extends React.Component {
     constructor(props){
         super(props)
     }
-    upClickhandler = (e) =>{
-      this.props.upClickhandler();
+    arrowHandler = (e) =>{
+      this.props.arrowHandler(e.currentTarget.dataset.arrow);
     }
-    downClickhandler = (e) =>{
-      this.props.downClickhandler();
-    }
+
     render() {
         return(<div className={scss.right__content}>
             <div><Slider sliderType="pictures"
@@ -29,10 +27,12 @@ class ClientMainRight extends React.Component {
             currentSlide={this.props.currentSlide}/>
             </div>
             <div className={scss.slider}>
-            <div className={scss.tag}><h2>NAME TAG BLA BLA</h2></div>
+            <div className={scss.tag}><div className={scss.hr}/><h2>World of Fashion</h2></div>
             <div className={scss.arrows}>
-            <FontAwesomeIcon icon={faAngleUp} className="fa-3x" onClick={this.upClickhandler} />
-            <FontAwesomeIcon icon={faAngleDown} className="fa-3x" onClick={this.downClickhandler} />
+            <div onClick={this.arrowHandler} data-arrow="up">
+            <FontAwesomeIcon icon={faAngleUp} className="fa-3x"  /></div>
+            <div onClick={this.arrowHandler} data-arrow="down" >
+            <FontAwesomeIcon icon={faAngleDown} className="fa-3x"  /></div>
             </div>
             </div>
         </div>);
